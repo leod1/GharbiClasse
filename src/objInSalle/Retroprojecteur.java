@@ -6,7 +6,7 @@ public class Retroprojecteur {
     private boolean OnOff;
 
     public Retroprojecteur() {
-        OnOff = true;
+        OnOff = false;
     }
 
     public void affichePowerPoint(ArrayList<String> strs){
@@ -17,5 +17,9 @@ public class Retroprojecteur {
 
     public void setOnOff(boolean onOff) {
         OnOff = onOff;
+    }
+
+    public boolean isOnOff() {
+        return OnOff;
     }
 }

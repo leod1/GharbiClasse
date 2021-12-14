@@ -12,6 +12,10 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) {
+        ArrayList<String> ppt = new ArrayList<>();
+        ppt.add("Salut");
+        ppt.add("Je suis");
+        ppt.add("Un POWER POINT");
         Ecole efficom = new Ecole(new ArrayList<>());
         efficom.getClasse().add(new Cours(new Tableaux(),new Retroprojecteur(),0,0));
         efficom.getClasse().add(new Cours(new Tableaux(),new Retroprojecteur(),0,0));
@@ -30,6 +34,14 @@ public class Main {
 
         //Permet d'activer la clim celon la température actuelle dans la salle de reunions
         ((Reunions) efficom.getClasse().get(6)).getClim().setClimRevers(26);
+
+        //Permet d'ajoute un powerpoint au retroprojecteur de la salle 0
+        ((Cours) efficom.getClasse().get(0)).lancerPPW(ppt);
+
+        //Permet d'ajoute un powerpoint au retroprojecteur de la salle 1
+        //Mais le projecteur n'est pas allumer
+        //((Cours) efficom.getClasse().get(1)).lancerVideoPro();
+        ((Cours) efficom.getClasse().get(1)).lancerPPW(ppt);
 
     }
 }

@@ -23,7 +23,9 @@ public class Cours extends Classe {
         super.getProjeteur().setOnOff(false);
     }
     public void lancerPPW(ArrayList<String> strs){
-        System.out.println("Le video pro affiche un ppt");
-        super.getProjeteur().affichePowerPoint(strs);
+        if (super.getProjeteur().isOnOff()){
+            System.out.println("Le video pro affiche un ppt");
+            super.getProjeteur().affichePowerPoint(strs);
+        }
     }
 }
